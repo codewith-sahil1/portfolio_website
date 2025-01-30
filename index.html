@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="main-content">
+    <header class="container header active" id="home">
+        <div class="header-content">
+            <div class="left-header">
+                <div class="h-shape"></div>
+                <div class="image">
+                    <img src="data:image/jpeg;base64,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" alt="">
+                </div>
+            </div>
+            <div class="right-header">
+                <h1 class="name">
+                    Hi, I'm <span>Sahil Raj Srivastava.</span>
+                    A Full Stack Web Developer.
+                </h1>
+                <p>
+                    I'm a full stack Web Developer, I love to create beautiful and functional websites. I have a passion for web development and love to create websites that are both visually appealing and user-friendly. I have experience in both front-end and back-end development, and I am always looking to expand my skill set and learn new technologies.
+                </p>
+                <div class="btn-con">
+                    <a href="123.pdf" target="_blank"  class="main-btn">
+                        <span class="btn-text">Download CV</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="container about" id="about">
+            <div class="main-title">
+                <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
+            </div>
+            <div class="about-container">
+                <div class="left-about">
+                    <h4>Information About me</h4>
+                    <p>
+                       
+                       
+                        Welcome to my portfolio website! My name is Sahil Raj Srivastava, and I am a passionate web developer with expertise in various programming languages and a track record of successful projects.
+                        <br>
+</p>
+
+<p>
+                        With a strong foundation in  C++ and JavaScript, I have honed my skills in both backend and frontend development. I strive to create elegant, efficient, and user-friendly websites that deliver a seamless user experience.
+                    </p> 
+                        Throughout my career, I have completed numerous projects that have allowed me to showcase my technical abilities and creativity. From developing dynamic web applications to designing responsive interfaces, I have gained valuable experience in delivering high-quality solutions tailored to meet client requirements.
+                        
+                        
+                        
+                    </p>
+                    <div class="btn-con">
+                        <a href="123.pdf" target="_blank" class= "main-btn">
+                            <span class="btn-text">Download CV</span>
+                            <span class="btn-icon"><i class="fas fa-download"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="right-about">
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">10+</p>
+                            <p class="small-text">Projects <br /> Completed</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">2+</p>
+                            <p class="small-text">Years of <br /> experience</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">5+</p>
+                            <p class="small-text">programming <br /> Knows</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">50+</p>
+                            <p class="small-text">Customer <br /> reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-stats">
+                <h4 class="stat-title">My Skills</h4>
+                <div class="progress-bars">
+                    <div class="progress-bar">
+                        <p class="prog-title">html5</p>
+                        <div class="progress-con">
+                            <p class="prog-text">80%</p>
+                            <div class="progress">
+                                <span class="html"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">C</p>
+                        <div class="progress-con">
+                            <p class="prog-text">95%</p>
+                            <div class="progress">
+                                <span class="css"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">React js</p>
+                        <div class="progress-con">
+                            <p class="prog-text">75%</p>
+                            <div class="progress">
+                                <span class="js"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">javascript</p>
+                        <div class="progress-con">
+                            <p class="prog-text">95%</p>
+                            <div class="progress">
+                                <span class="react"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">C++</p>
+                        <div class="progress-con">
+                            <p class="prog-text">87%</p>
+                            <div class="progress">
+                                <span class="node"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">Css3</p>
+                        <div class="progress-con">
+                            <p class="prog-text">70%</p>
+                            <div class="progress">
+                                <span class="python"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-bar">
+                        <p class="prog-title">Node js</p>
+                        <div class="progress-con">
+                            <p class="prog-text">70%</p>
+                            <div class="progress">
+                                <span class="python"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="stat-title">My Timeline</h4>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p class="tl-duration">2022 - present</p>
+                    <h5>Bachlor's Of Computer Application<span> - Quantum University</span></h5>
+                    <p>
+                        I am purshing my degree in the field of the computer science From the Quantum University Roorkee ,India.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p class="tl-duration">2021-2022</p>
+                    <h5>completed the intermediate <span> - Shivalik Ganges Public School.</span></h5>
+                    <p>
+                    i completed my intermediate (10+2) in the field of Physics , Chemisty , Maths and in Python
+                    </p>
+                </div>
+                <!-- <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p class="tl-duration">May 2022 - Nov 2022</p>
+                    <h5>C/C++ Programmer<span> - </span></h5>
+                    <p>
+                         I was the C/C++ programmer and i build very crucial things with the help of C and C++  language.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p class="tl-duration">Aug 2022 - 2023</p>
+                    <h5>Web Developer<span> </span></h5>
+                    <p>
+                        I started to build the outstanding projects in the field of the web development 
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p class="tl-duration">2020 - 2022</p>
+                    <h5>Python Programmer<span> </span></h5>
+                    <p>
+                        I choose python is my first programming language of my coding journey and become the pyhone developer.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <p class="tl-duration">2023 - present</p>
+                    <h5>Java Progrmmer<span> </span></h5>
+                    <p>
+                       Right now I am working with the java and i am a java programmer
+                    </p>
+                </div> -->
+            </div>
+        </section>
+        <section class="container" id="portfolio">
+            <div class="main-title">
+                <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
+            </div>
+            <p class="port-text">
+                Here is some of my work that I've done in various programming languages.
+            </p>
+            <div class="portfolios">
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="img/Screenshot (153).png" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Visit Musicfy</h3>
+                        <div class="icons">
+                            <a href="http://musicfy.42web.io/?i=1" target="blank"class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="http://musicfy.42web.io/?i=1" target="blank" class="icon">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="http://musicfy.42web.io/?i=1" target="blank" class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="img/Screenshot (155).png" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3> Visit Sahil'sfitness</h3>
+                        <div class="icons">
+                            <a href="http://sahilfitness.infinityfreeapp.com/gym/index.html?i=1" target="blank"
+                            " class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="http://sahilfitness.infinityfreeapp.com/gym/index.html?i=1" target="blank" class="icon">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="http://sahilfitness.infinityfreeapp.com/gym/index.html?i=1" target="blank" class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="img/Screenshot (156).png" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Visit Sahil's clock</h3>
+                        <div class="icons">
+                            <a href="http://clockbysrivastava.epizy.com/?" target="blank" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="http://clockbysrivastava.epizy.com/?" target="blank" class="icon">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="http://clockbysrivastava.epizy.com/?" target="blank" class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="portfolio-item">
+                    <div class="image">
+                        <img src="img/port4.jpg" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a href="#" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="portfolio-item">
+                    <div class="image">
+                        <img src="img/port5.jpg" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a href="#" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+               -->
+                <!-- <div class="portfolio-item">
+                    <div class="image">
+                        <img src="img/port7.jpg" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a href="#" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+        <section class="container" id="blogs">
+            <div class="blogs-content">
+                <div class="main-title">
+                    <h2>My <span>Blogs</span><span class="bg-text">My Blogs</span></h2>
+                </div>
+                <div class="blogs">
+                    <div class="blog">
+                        <img src="img/port6.jpg" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                How to Create Your Own Website
+                            </h4>
+                            <p>
+                               the web site is most important thing in this modern world . in this modern fast growing technology and the age of AI tools the making is as simple as that ..
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="img/blog1.jpg" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                How to Become an Expert in Web Design
+                            </h4>
+                            <p>
+                              To become a Web designer, you should study both the creative and technical aspects of creating attractive web pages. through a collage degreee program or certification program. 
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="img/blog2.jpg" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Become a Web Designer in 10 Days
+                            </h4>
+                            <p>
+                                You can learn now how to become a web designer and work with all the website's visual components . from color and font to layout.
+                            </p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="img/blog3.jpg" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Debbuging made easy with Web Inspector
+                            </h4>
+                            <p>
+                                A features that allows to developers or tester to text and debug websites online directly through browsers in real- world conditions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="img/port1.jpg" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                Get started with Web Design and UI Design
+                            </h4>
+                            <p>
+                                Both UI and UX design, along with marry other fields , are included under web design. The techincal part of making a website.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <img src="img/port3.jpg" alt="">
+                        <div class="blog-text">
+                            <h4>
+                                This is what you need to know about Web Design
+                            </h4>
+                            <p>
+                               It is usually one of the first things people look at to get to know a brand and therfore helps from the first impression.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container contact" id="contact">
+            <div class="contact-container">
+                <div class="main-title">
+                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
+                </div>
+                <div class="contact-content-con">
+                    <div class="left-contact">
+                        <h4>Contact me here</h4>
+                        <p>
+                           You can easily contact me through followings. i will be really happy and pleasured to Response You. And very excited to work with you 
+                        </p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location</span>
+                                </div>
+                                <p>
+                                    : Roorkee, India
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email</span>
+                                </div>
+                                <p>
+                                    <span>: shlrjsrivastava@gmail.com</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Education</span>
+                                </div>
+                                <p>
+                                    <span>: Quantum University, India</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Mobile Number</span>
+                                </div>
+                                <p>
+                                    <span>: 7505122731</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-globe-africa"></i>
+                                    <span>Languages</span>
+                                </div>
+                                <p>
+                                    <span>: Hindi, English, Bhojpuri</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-icons">
+                            <div class="contact-icon">
+                                <a href="https://www.facebook.com/sahilraj.srivastava.16/" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://github.com/sahilrajQmate" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://youtube.com/@sahilrajsrivastava3891" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-contact">
+                        <form action="" class="contact-form">
+                            <div class="input-control i-c-2">
+                                <input type="text" required placeholder="YOUR NAME">
+                                <input type="email" required placeholder="YOUR EMAIL">
+                            </div>
+                            <div class="input-control">
+                                <input type="text" required placeholder="ENTER SUBJECT">
+                            </div>
+                            <div class="input-control">
+                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
+                            </div>
+                            <div class="submit-btn">
+                                <a href="123.pdf" target="_blank"  class="main-btn">
+                                    <span class="btn-text">Download CV</span>
+                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="controls">
+        <div class="control active-btn" data-id="home" >
+            <i class="fas fa-home"></i>
+        </div>
+        <div class="control" data-id="about">
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="control" data-id="portfolio">
+            <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="control" data-id="blogs">
+            <i class="far fa-newspaper"></i>
+        </div>
+        <div class="control" data-id="contact">
+            <i class="fas fa-envelope-open"></i>
+        </div>
+    </div>
+    <div class="theme-btn">
+        <i class="fas fa-adjust"></i>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
